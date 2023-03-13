@@ -36,6 +36,8 @@ header {
     justify-content: space-between;
     max-width: 1200px;
     width: 100vw;
+    margin: 0 30px;
+    overflow: hidden;
 }
 
 .header-logo {
@@ -63,6 +65,10 @@ header {
     color: #fff;
 }
 
+.hamburger {
+    display: none;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -87,12 +93,12 @@ main {
 }
 
 h1 {
-    font-size: 4vw;
+    font-size: 4rem;
     font-weight: 700;
 }
 
 h1+p {
-    font-size: 1.5vw;
+    font-size: 35px;
 }
 
 .first img {
@@ -110,7 +116,7 @@ h1+p {
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 55px;
     margin-top: 30px;
 }
 
@@ -124,8 +130,8 @@ h2 {
 
 .photo {
     background: 50% 50% no-repeat;
-    width: 350px;
-    height: 350px;
+    width: 18vw;
+    height: 18vw;
     border-radius: 30px;
     outline: 2px white solid;
 }
@@ -156,14 +162,14 @@ h2 {
 }
 
 .quote {
-    padding: 150px;
+    padding: 10vw;
     width: 60%;
 }
 
 .words {
     font-size: 2vw;
     font-style: italic;
-    font-weight:300;
+    font-weight: 300;
     margin-bottom: 10px;
 }
 
@@ -193,6 +199,52 @@ footer {
     color: var(--dark-pink);
 }
 
-a:visited {
-    
+
+@media screen and (max-width:900px) {
+    .first {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .pictures-container {
+        margin: 50px;
+    }
+
+    .quote {
+        padding: 30px;
+    }
+
+    .words {
+        font-size: 30px;
+    }
+
+    .author {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .header-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .photo {
+        background: 50% 50% no-repeat;
+        width: 50vw;
+        height: 50vw;
+    }
+
 }
